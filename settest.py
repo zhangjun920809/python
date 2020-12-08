@@ -78,3 +78,19 @@ se7 ={33,88,66,87,99}
 se8 ={101,103}
 print(se6.isdisjoint(se7))  # 有交集--> false
 print(se7.isdisjoint(se8))  # 无交集 -->true
+
+# 两个集合的数学操作
+se1 = {10,20,30,40}
+se2 = {10,20,30,50,60}
+# 并集
+print(se1.intersection(se2))  #{10, 20, 30}
+print(se1 & se2)  # 与上面等效  &
+# 交集
+print(se1.union(se2))        #{40, 10, 50, 20, 60, 30}
+print(se1 | se2)    # 与上面等效  |
+# 差集  ，即集合se1中与se2不重复元素
+print(se1.difference(se2))   #{40}
+print(se1 - se2)         # 与上面等效 -
+# 对称差集   ,即两个集合所有不重复的元素的集合
+print(se1.symmetric_difference(se2))  #{50, 40, 60}
+print(se1 ^ se2)   # 与上面的等效 ^
